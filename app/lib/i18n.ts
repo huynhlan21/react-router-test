@@ -1,6 +1,6 @@
 // This is the list of languages your application supports,
 // the fallback is always the last
-export const supportedLngs = ["vi-VI", "en-US"];
+export const supportedLngs = ["vi-VN", "en-US"];
 
 // This is the language you want to use in case
 // if the user preferred language is not in the supportedLngs

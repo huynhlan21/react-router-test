@@ -13,7 +13,7 @@ import { createInstance } from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-fs-backend/cjs";
 
-import i18n from "~/lib/i18n.init";
+import i18n from "~/lib/i18n.client";
 import i18nServer from "~/lib/i18n.server";
 
 export const streamTimeout = 5_000;
@@ -45,6 +45,11 @@ export default async function handleRequest(
       ...i18n,
       lng,
       ns,
+      detection: {
+        order: ["cookie", "header"],
+        caches: [],
+        lookupCookie: "i18next",
+      },
       backend: {
         localePath: path.resolve("./public/locales"),
         loadPath: resolve("./public/locales/{{lng}}/{{ns}}.json"),

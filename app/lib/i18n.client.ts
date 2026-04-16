@@ -10,5 +10,10 @@ export default i18next
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    detection: {
+      order: ["cookie", "header"],
+      caches: [],
+      lookupCookie: "i18next",
+    },
     ...i18n,
   });
