@@ -1,10 +1,10 @@
 // This is the list of languages your application supports,
 // the fallback is always the last
-export const supportedLngs = ["vi-VN", "en-US"];
+export const supportedLngs = ["vi_VN", "en_US"];
 
 // This is the language you want to use in case
 // if the user preferred language is not in the supportedLngs
-export const fallbackLng = "en-US";
+export const fallbackLng = "en_US";
 
 // The default namespace of i18next is "translation", but you can customize it
 // here

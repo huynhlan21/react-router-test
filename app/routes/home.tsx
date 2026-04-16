@@ -26,14 +26,14 @@ export default function Home() {
     <div>
       <div className="flex gap-5">
         <button
-          className={`${language === "en-US" ? "text-white" : "text-gray-400"}`}
-          onClick={() => handleChangeLanguage("en-US")}
+          className={`${language === "en_US" ? "text-white" : "text-gray-400"}`}
+          onClick={() => handleChangeLanguage("en_US")}
         >
           EN
         </button>
         <button
-          className={`${language === "vi-VN" ? "text-white" : "text-gray-400"}`}
-          onClick={() => handleChangeLanguage("vi-VN")}
+          className={`${language === "vi_VN" ? "text-white" : "text-gray-400"}`}
+          onClick={() => handleChangeLanguage("vi_VN")}
         >
           VI
         </button>
