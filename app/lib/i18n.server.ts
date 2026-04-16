@@ -1,0 +1,22 @@
+import { resolve } from "node:path";
+import { RemixI18Next } from "remix-i18next/server";
+import Backend from "i18next-http-backend";
+
+import * as i18n from "~/lib/i18n";
+
+export default new RemixI18Next({
+  detection: {
+    supportedLanguages: i18n.supportedLngs,
+    fallbackLanguage: i18n.fallbackLng,
+  },
+  i18next: {
+    ...i18n,
+    backend: {
+      loadPath: resolve("./public/locales/{{lng}}/{{ns}}.json"),
+    },
+    interpolation: {
+      escapeValue: false,
+    },
+  },
+  plugins: [Backend],
+});

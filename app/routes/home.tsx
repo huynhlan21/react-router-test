@@ -1,5 +1,5 @@
+import { useTranslation } from "react-i18next";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +9,12 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  const { t } = useTranslation("translation");
+
+  return (
+    <div>
+      <h1>{t("title")}</h1>
+      <p>Description</p>
+    </div>
+  );
 }
