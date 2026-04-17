@@ -3,5 +3,6 @@
     "description": {
         "part1": "Lokalise-Vi-To get started, edit <1>src\/App.js<\/1> and save to reload.",
         "part2": "Lokalise-Vi-Switch language between english and german using buttons above."
-    }
+    },
+    "boolean": ""
 }
